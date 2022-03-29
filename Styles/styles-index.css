@@ -405,7 +405,7 @@ header .header-button-container #flechaabajo{
 .options > p{
     text-align: center;
     padding: 8px;
-    margin-bottom: -15px;
+    margin-bottom: -40px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -423,6 +423,30 @@ header .header-button-container #flechaabajo{
     grid-template-columns: repeat(3,190px);
     gap: 8px;
     grid-template-rows: 247px;
+    grid-template-areas:
+        "one two three"
+    ;
+}
+.options #arrow-left-options{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: var(--offwhite);
+    position: relative;
+    top: calc(135.5px);
+    right: calc(50% - 36px);
+}
+.options #arrow-right-options{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: var(--offwhite);
+    position: relative;
+    bottom: calc(135.5px);
+    left: calc(50% - 36px);
+}
+.options .options-grid-container .options-grid-pane:nth-child(2n+1){
+    visibility: hidden;
 }
 .options .options-grid-container .options-grid-pane{
     background-color: white;
@@ -435,7 +459,8 @@ header .header-button-container #flechaabajo{
     justify-content: center;
 }
 .options .options-grid-container .options-grid-pane .options-grid-pane-heading{
-    margin: 8px 58px;
+    align-self: center;
+    margin: 8px 0px;
     font-family: 'DM Sans';
     font-style: normal;
     font-weight: 500;
@@ -444,9 +469,9 @@ header .header-button-container #flechaabajo{
     color: black;
 }
 .options .options-grid-container .options-grid-pane .options-grid-pane-price{
-    width: 75px;
+    padding-right: 13px;
     height: 60px;
-    margin-left: 50px;
+    align-self: center;
     margin-bottom: 16px;
     font-family: 'Inter';
     font-style: normal;
@@ -468,6 +493,8 @@ header .header-button-container #flechaabajo{
     line-height: 1.5rem;
 }
 .options .options-grid-container .options-grid-pane .options-grid-pane-info{
+    width: 85%;
+    align-self: center;
     text-align: center;
     font-family: 'Inter';
     font-style: normal;
