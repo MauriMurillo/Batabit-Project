@@ -27,6 +27,7 @@
 html{
     font-size: 62.5%;
     font-family: "DM Sans",sans-serif;
+    scroll-behavior: smooth;
 }
 
 /* Estilos del header */
@@ -88,7 +89,7 @@ header .header-button-container a:first-child{
     font-size: 1.4rem;
     line-height: 18px;
     text-align: center;
-    border: none;
+    text-decoration: none;
     background-color: var(--offwhite);
     color: var(--warmblack);
 }
@@ -99,7 +100,7 @@ header .header-button-container #flechaabajo{
 
 /* Estilos de la primera seccion */
 .exchange{
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -160,7 +161,6 @@ header .header-button-container #flechaabajo{
 .exchange .exchange-chart-container-grid{
     width: 200%;
     min-width: 640px;
-    max-width: 1400px;
     height: 185px;
     display: grid;
     align-content: center;
@@ -284,11 +284,12 @@ header .header-button-container #flechaabajo{
     flex-direction: column;
     align-items: center;
 }
-.traits  #logo{
-    width: 41px;
+.logocont{
+    background-color: var(--offwhite);
+    width: 100%;
     height: 25px;
-    position: relative;
-    bottom: 10px;
+    display: flex;
+    justify-content: center;
 }
 .traits div{
     width: 90%;
@@ -557,8 +558,101 @@ footer .links a{
     line-height: 1.8rem;
     color: white;
 }
-
 footer img{
     height: 100%;
     width: 50px;
+}
+
+
+
+/* Media Queries ajustes */
+@media screen and (min-width: 600px) {
+    .options .options-grid-container .options-grid-pane:nth-child(2n+1){
+        visibility: visible;
+    }
+    .options #arrow-left-options, .options #arrow-right-options{
+        visibility: hidden;
+    }
+
+    .exchange .exchange-chart-container-grid{
+        width: 100%;
+        place-content: center;
+        place-items: center;
+        grid-template-columns: repeat(2, 20%);
+        grid-template-rows: 185px;
+        margin-bottom: 16px;
+        grid-template-areas:
+            "one two"
+        ;
+    }
+    .exchange #arrow-left , .exchange #arrow-right{
+        visibility: hidden;
+    }
+    .picture{
+        background: url("../Assets/images/bitcoinbaby\ 2.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 299px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .picture h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4rem;
+        line-height: 4.2rem;
+        padding-top: 0px;
+    }
+    footer img{
+        margin-left: calc(100% - 300px);
+    }
+}
+@media screen and (min-width: 1000px) {
+    :root{
+        font-size: 70%;
+    }
+    .presentation .header-button-container{
+        width: 280px;
+    }
+    .traits{
+        width: 100vw;
+        height: 600px;
+        background-color: var(--warmblack);
+        display: grid;
+        place-items: center;
+        place-content: center;
+        gap: 30px;
+        grid-template-columns: repeat(2,40%);
+        grid-template-rows: repeat(3,150px);
+        grid-template-areas:
+            "two two"
+            "three four"
+            "five six"
+        ;
+    }
+    .traits .traits-article{
+        width: 100%;
+    }
+    .traits .traits-heading-container{
+        grid-area: two;
+    }
+    .picture{
+        height: 500px;
+    }
+    .picture h2{
+        font-style: normal;
+        font-weight: 700;
+        font-size: 4.5rem;
+        line-height: 4.7rem;
+        padding-top: 0px;
+    }
+    footer img{
+        width: 80px;
+    }
+    header #logo-header{
+        width: 200px;
+        height: 40px;
+    }
 }
