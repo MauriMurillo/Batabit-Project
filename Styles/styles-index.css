@@ -1,0 +1,537 @@
+/*
+    Convencion en esta hoja de estilos
+    1- posicionamiento
+    2- Modelo de Caja -> Box Model
+    3- Tipografia
+    4- Temas Visuales
+    5- Otros
+*/
+:root{
+    /* Colores del projecto */
+    --btcoinorange: #F7931A;
+    --softorange: #FFE9D4;
+    --secondaryblue: #1A9AF7;
+    --softblue: #E7F5FF;
+    --warmblack: #201E1C;
+    --warmblack1: #282623;
+    --primarygrey: #808080;
+    --secondarygrey: #757575;
+    --tablegrey: #B5B0AC;
+    --offwhite: #FAF8F7;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    font-family: "DM Sans",sans-serif;
+}
+
+/* Estilos del header */
+header{
+    width: 100vw;
+    min-width: 320px;
+    height: 295px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 85px 200px 50px;
+    place-items: center;
+    place-content: center;
+    background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
+}
+header #logo-header{
+    width: 130px;
+    height: 25px;
+    align-self: end;
+}
+header #heading{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 20px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    text-align: center;
+    color: #FFFFFF;
+}
+header #intro{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin: 20px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-align: center;
+    color: var(--softorange);
+    align-self: start;
+}
+header .header-button-container{
+    width: 229px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offwhite);
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    border-radius: 4px;
+}
+header .header-button-container a:first-child{
+    width: 80%;
+    height: fit-content;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 18px;
+    text-align: center;
+    border: none;
+    background-color: var(--offwhite);
+    color: var(--warmblack);
+}
+header .header-button-container #flechaabajo{
+    width: 24px;
+}
+/* Fin de estilos del header */
+
+/* Estilos de la primera seccion */
+.exchange{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--offwhite);
+    overflow: hidden;
+}
+.exchange #bitcoin{
+    width: 195px;
+    align-self: center;
+    margin-top: 75px;
+    margin-bottom: 40px;
+}
+.exchange h2{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    align-self: center;
+    margin-bottom: 24px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warmblack);
+}
+.exchange h3{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    margin-bottom: 50px;
+    align-self: center;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--secondarygrey);
+}
+.exchange #arrow-left{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: var(--offwhite);
+    position: relative;
+    top: 139px;
+    left: 24px;
+    visibility: hidden;
+}
+.exchange #arrow-right{
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: var(--offwhite);
+    position: relative;
+    top: 115px;
+    left: calc(100% - 48px);
+}
+.exchange .exchange-chart-container-grid{
+    width: 200%;
+    min-width: 640px;
+    max-width: 1400px;
+    height: 185px;
+    display: grid;
+    align-content: center;
+    justify-content: start;
+    place-items: center;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 185px;
+    margin-bottom: 16px;
+    grid-template-areas:
+        "one two"
+    ;
+}
+.exchange .exchange-chart-container{
+    display: flex;
+    flex-direction: column;
+}
+.exchange .exchange-chart-container > p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 23px;
+    color: var(--secondaryblue);
+    padding-right: 63px;
+    align-self: center;
+}
+#exchange-chart-container-heading-coins{
+    color: #FF9536;
+    padding-right: 91px;
+}
+.exchange .exchange-chart-grid-commission{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    width: 190px;
+    height: 160px;
+    border-radius: 10px;
+    grid-template-columns: 100px 90px;
+    grid-template-rows: repeat(4,40px);
+    background-color: white;
+    align-self: center;
+}
+.exchange .exchange-chart-grid-commission p:nth-child(2n+1){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.02em;
+    color: var(--tablegrey);
+}
+.exchange .exchange-chart-grid-commission p:nth-child(2n){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--secondarygrey);
+}
+.exchange .exchange-chart-grid-coins{
+    display: grid;
+    place-items: center;
+    place-content: center;
+    width: 190px;
+    height: 160px;
+    border-radius: 10px;
+    grid-template-columns: 100px 50px 40px;
+    grid-template-rows: repeat(4,40px);
+    background-color: white;
+    align-self: center;
+}
+.exchange .exchange-chart-grid-coins *:nth-child(3n){
+    width: 12px;
+    height: 12px;
+}
+.exchange .exchange-chart-grid-coins *:nth-child(3n+1){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    letter-spacing: -0.02em;
+    color: var(--tablegrey);
+}
+.exchange .exchange-chart-grid-coins *:nth-child(3n+2){
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    letter-spacing: -0.02em;
+    color: var(--secondarygrey);
+}
+
+.exchange #exchange-refresh{
+    align-self: center;
+    width: fit-content;
+    padding: 8px;
+    margin-bottom: 64px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    text-align: center;
+    color: var(--warmblack1);
+    background-color: var(--softblue);
+}
+.exchange #exchange-refresh span{
+    font-weight: 400;
+}
+
+/* Estilos de la seccion de traits */
+.traits{
+    width: 100vw;
+    height: 910px;
+    background-color: var(--warmblack);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.traits  #logo{
+    width: 41px;
+    height: 25px;
+    position: relative;
+    bottom: 10px;
+}
+.traits div{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    height: 94px;
+    margin-top: 64px;
+    margin-bottom: 32px;
+}
+.traits div h2{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 24px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: white;
+}
+.traits div p{
+    text-align: center;
+    margin: 0 auto;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--primarygrey);
+}
+.traits .traits-article{
+    width: 90%;
+    min-width: 288px;
+    max-width: 600px;
+    height: 152px;
+    background-color: var(--warmblack1);
+    margin: 8px;
+}
+.traits .traits-article h3{
+    margin-left: 16px;
+    margin-bottom: 10px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1,8rem;
+    color: white;
+}
+.traits .traits-article p{
+    margin-left: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--primarygrey);
+}
+.traits .traits-article img{
+    margin: 16px 0px 12px 18px;
+}
+/* Estilos de la section picture */
+.picture {
+    background: url("../Assets/images/bitcoinbaby\ 1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 387px;
+    width: 100%;
+}
+.picture h2{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+    padding-top: 64px;
+    margin: 0 auto;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: white;
+}
+/* Estilos de la section options */
+.options{
+    width: 100vw;
+    height: 540px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--offwhite);
+    overflow: hidden;
+}
+.options .options-heading-container{
+    width: 90%;
+    min-width: 288px;
+    max-width: 900px;
+}
+.options .options-heading-container h2{
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+    color: var(--warmblack);
+    margin-bottom: 24px;
+}
+.options .options-heading-container p{
+    text-align: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: var(--secondarygrey);
+    margin-bottom: 34px;
+}
+.options > p{
+    text-align: center;
+    padding: 8px;
+    margin-bottom: -15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    background-color: var(--btcoinorange);
+    color: white;
+    border-radius: 8px;
+    z-index: 10;
+}
+.options .options-grid-container{
+    width: 586px;
+    height: 247px;
+    display: grid;
+    grid-template-columns: repeat(3,190px);
+    gap: 8px;
+    grid-template-rows: 247px;
+}
+.options .options-grid-container .options-grid-pane{
+    background-color: white;
+    width: 190px;
+    height: 247px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-heading{
+    margin: 8px 58px;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: black;
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-price{
+    width: 75px;
+    height: 60px;
+    margin-left: 50px;
+    margin-bottom: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 5.2rem;
+    line-height: 6.3rem;
+    letter-spacing: -0.08em;
+    color: black;
+}
+.options-grid-pane-price::before{
+    content: "$";
+    position: relative;
+    top: -27px;
+    margin-bottom: 16px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-info{
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    color: var(--secondarygrey);
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-button-container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 151px;
+    height: 48px;
+    margin-top: 16px;
+    background-color: var(--offwhite);
+    border: 2px solid var(--btcoinorange);
+    box-sizing: border-box;
+    border-radius: 4px;
+    align-self: center;
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-button-container .options-grid-pane-button{
+    margin: 15px 8px 15px 16px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: var(--warmblack);
+}
+.options .options-grid-container .options-grid-pane .options-grid-pane-button-container #flecha-der-naranja{
+    width: 24px;
+    margin: 12px 0px;
+}
+/* Estilos del footer */
+footer{
+    display: flex;
+    height: 150px;
+    background-color: var(--btcoinorange);
+}
+footer .links{
+    height: 100%;
+    width: 198px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+footer .links a{
+    width: 100%;
+    height: fit-content;
+    text-align: left;
+    padding-left: 65px;
+    margin: 8px 0;
+    font-style: normal;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    color: white;
+}
+
+footer img{
+    height: 100%;
+    width: 50px;
+}
