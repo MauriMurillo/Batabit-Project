@@ -578,7 +578,7 @@ footer img{
         width: 100%;
         place-content: center;
         place-items: center;
-        grid-template-columns: repeat(2, 20%);
+        grid-template-columns: repeat(2, 30%);
         grid-template-rows: 185px;
         margin-bottom: 16px;
         grid-template-areas:
@@ -615,6 +615,9 @@ footer img{
     }
     .presentation .header-button-container{
         width: 280px;
+    }
+    .exchange .exchange-chart-container-grid{
+        grid-template-columns: repeat(2, 25%);
     }
     .traits{
         width: 100vw;
